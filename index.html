@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva de Áreas Comuns</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- Moldura do celular -->
+    <div class="phone-frame">
+        <div class="camera"></div>
+        <div class="speaker"></div>
+
+        <!-- Tela do celular -->
+        <div class="phone-screen">
+            <div class="header">RESERVAS</div>
+            
+            <!-- Seleção da Área e Data -->
+            <div id="select-area-date" class="section active">
+                <select id="area" class="dropdown">
+                    <option>Selecione a área desejada</option>
+                    <option>Salão de festas</option>
+                    <option>Quadra de tênis</option>
+                    <option>Sala de cinema</option>
+                    <option>Piscina</option>
+                    <option>Quadra de futsal</option>
+                    <option>Salão gourmet</option>
+                </select>
+                <input type="date" id="date" class="calendar" placeholder="Selecione a data">
+                <button class="confirm-button" onclick="showForm()">SOLICITAR RESERVA</button>
+            </div>
+
+            <!-- Formulário de Reserva -->
+            <div id="form" class="section">
+                <div class="reservation-info">
+                    <span id="selected-area">Área Selecionada</span><br>
+                    <span id="selected-date">Data Selecionada</span>
+                </div>
+                <input type="time" id="time" class="form-input" placeholder="Horário">
+                <input type="text" id="reason" class="form-input" placeholder="Motivo da Reserva">
+                <input type="number" id="people" class="form-input" placeholder="Número de Pessoas">
+                <button class="confirm-button" onclick="confirmReservation()">CONFIRMAR RESERVA</button>
+            </div>
+
+            <!-- Confirmação de Reserva -->
+            <div id="confirmation" class="section">
+                <div class="reservation-info" id="reservation-summary">
+                    <!-- Resumo da Reserva será inserido aqui -->
+                </div>
+                <button class="confirm-button" onclick="showSection('select-area-date')">OK</button>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
